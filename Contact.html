@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REACHA Organics Contact</title>
+  <link rel="stylesheet" href="Contact_Style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="Images/reachaLogo_final.png" class="LOGO" alt="REACHA Logo">
+    <nav>
+      <a href="MatchaHtml.html" class="Home">HOME</a>
+      <a href="Products.html" class="Home">PRODUCTS</a>
+      <a href="About.html" class="Info">ABOUT US</a>
+      <a href="Contact.html" class="Contact">CONTACT US</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <!-- Left Side: Info & Social -->
+    <div class="contact-left">
+      <h2>Contact Info</h2>
+      <p>
+  <a href="#" onclick="copyEmail('info@reachaorganics.com', 'bubble-info'); return false;">
+    info@reachaorganics.com
+  </a>
+  <span class="copy-bubble" id="bubble-info">Copied!</span>
+</p>
+
+<p>
+  <a href="#" onclick="copyEmail('sales@reachaorganics.com', 'bubble-sales'); return false;">
+    sales@reachaorganics.com
+  </a>
+  <span class="copy-bubble" id="bubble-sales">Copied!</span>
+</p>
+
+<p>
+  <a href="#" onclick="copyEmail('support@reachaorganics.com', 'bubble-support'); return false;">
+    support@reachaorganics.com
+  </a>
+  <span class="copy-bubble" id="bubble-support">Copied!</span>
+</p>
+
+      
+      <div class="social-icons">
+        <a href="https://www.instagram.com/reacha.organic?igsh=dGEwZTg2M3BydHU1" target="_blank"><img src="Images/instagram.png" alt="Instagram" class="social-icon"/></a>
+        <a href="https://www.facebook.com/share/1BD3wHUbzj/" target="_blank"><img src="Images/facebook.png" alt="Facebook" class="social-icon"/></a>
+        <a href="https://tiktok.com/@reachaorganics" target="_blank"><img src="Images/tiktok.png" alt="TikTok"  class="social-icon" style="width: 45px; height: 45px;"/>
+</a>
+
+      </div>
+    </div>
+
+    <!-- Right Side: Form -->
+    <div class="contact-right">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm">
+        <input type="text" name="firstname" placeholder="First Name" required />
+        <input type="text" name="lastname" placeholder="Last Name" required />
+        <input type="text" name="company" placeholder="Company Name" />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Write your message here..." rows="6" required></textarea>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+        <a href="Contact.html" class="contact-link">
+      <h4>Contact Us</h4></a>
+      <ul class="contact-list">
+        <li>info@reacha.com</li>
+        <li>support@reacha.com</li>
+        <li>sales@reacha.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>Socials</h4>
+      <div class="socials">
+        <a href="#"><img src="Images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="Images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="Images/tiktok.png" alt="TikTok"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 REACHA Organics. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
+<script>
+function copyEmail(email, bubbleId) {
+  navigator.clipboard.writeText(email).then(() => {
+    const bubble = document.getElementById(bubbleId);
+    bubble.style.display = "inline-block";
+    bubble.style.opacity = "1";
+
+    setTimeout(() => {
+      bubble.style.display = "none";
+    }, 2000);
+  }).catch(err => {
+    console.error("Failed to copy email: ", err);
+  });
+}
+
+</script>
+

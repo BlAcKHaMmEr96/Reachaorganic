@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('Images/bubble4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #eee;
+  margin: 0;
+  font-size: 12px;
+  position: relative;
+}
+
+/* Dark overlay using ::before */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Increase to 0.7 or 0.8 for darker */
+  z-index: -1;
+}
+
+.LOGO{
+    max-width: 80%;
+    height: 100px;
+    display: flex;
+    position: relative;
+    z-index: 100;
+    margin-top: 30px;
+    right: 130px;
+    top: 30px;
+    width: 10vw;
+    height: auto;
+    
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00ff00;
+    transition: width 0.3s ease-in-out;
+  }
+   nav a:hover::after {
+    width: 100%;
+  }
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header a{
+    margin-right: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.about-reacha {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 80px 20px;
+  background: url('organic-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.bubble.right {
+  flex-direction: row;
+}
+
+.bubble.left {
+  flex-direction: row-reverse;
+}
+
+.bubble-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin: 20px;
+}
+
+.bubble-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble-text {
+  flex: 1;
+  padding: 40px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bubble-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.bubble-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+
+.footer {
+  background: #8F9779; /* subtle transparent layer */
+  backdrop-filter: blur(10px);                /* applies the blur effect */
+  -webkit-backdrop-filter: blur(10px);        /* Safari support */
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  padding: 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+/* Top layout: Contact + Socials */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Contact Section */
+.footer-left {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-left h4 {
+  font-size: 1em;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 4px;
+  font-size: 0.85em;
+}
+contact-link h4 {
+  color: #2e7d32;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover h4 {
+  color: #00ff00;
+  cursor: pointer;
+}
+
+
+/* Socials Section */
+.footer-right {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* Center the label and icons horizontally */
+  margin-right: auto;          /* Push the section slightly left */
+  margin-left: 800px;
+}
+
+.footer-right h4 {
+  font-size: 1.5em;
+  color: #2e7d32;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;     /* Center the icons under the label */
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.socials a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+
+/* Copyright Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1.2em;
+  color: #B3B3B3;
+}
+
